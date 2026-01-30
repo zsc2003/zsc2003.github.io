@@ -15,4 +15,8 @@ I was an undergraduate student at [ShanghaiTech University](https://www.shanghai
 
 Email:
 ------
-[zhousc25@mails.tsinghua.edu.cn](mailto:zhousc25@mails.tsinghua.edu.cn), [zhoushch@alumni.shanghaitech.edu.cn](mailto:zhoushch@alumni.shanghaitech.edu.cn), [zhoushch@shanghaitech.edu.cn](mailto:zhoushch@shanghaitech.edu.cn)
+[zhousc25@mails.tsinghua.edu.cn](mailto:zhousc25@mails.tsinghua.edu.cn)
+
+[zhoushch@alumni.shanghaitech.edu.cn](mailto:zhoushch@alumni.shanghaitech.edu.cn)
+
+[zhoushch@shanghaitech.edu.cn](mailto:zhoushch@shanghaitech.edu.cn)
