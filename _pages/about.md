@@ -7,12 +7,12 @@ redirect_from:
   - /about.html
 ---
 
-I'm currently a master's student at [Tsinghua University](baidu.com), majoring in Mathematics since 2025.
+I'm currently a master's student at [Tsinghua University](https://www.tsinghua.edu.cn/), majoring in Mathematics since 2025.
 
-I was an undergraduate student at [ShanghaiTech University](baidu.com), majoring in Computer Science from 2021 to 2025.
+I was an undergraduate student at [ShanghaiTech University](https://www.shanghaitech.edu.cn/), majoring in Computer Science from 2021 to 2025.
 
 
 
-For more info
+Email:
 ------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+[zhousc25@mails.tsinghua.edu.cn](mailto:zhousc25@mails.tsinghua.edu.cn), [zhoushch@alumni.shanghaitech.edu.cn](mailto:zhoushch@alumni.shanghaitech.edu.cn), [zhoushch@shanghaitech.edu.cn](mailto:zhoushch@shanghaitech.edu.cn)
