@@ -5,6 +5,8 @@ type: "Undergraduate Courses"
 permalink: /teaching/ShanghaiTech
 venue: "ShanghaiTech University"
 date: 2023-2025
+date: 2023-09-01
+end_date: 2025-07-01
 location: "Shanghai, China"
 ---
 
