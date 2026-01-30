@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate Courses"
 permalink: /teaching/ShanghaiTech
 venue: "ShanghaiTech University"
-date: 2023~2025
+# date: 2023~2025
 location: "Shanghai, China"
 ---
 
