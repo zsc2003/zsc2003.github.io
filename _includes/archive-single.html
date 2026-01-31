@@ -1,5 +1,12 @@
 {% include base_path %}
 
+{% assign primary_link = post.project | default: post.paperurl | default: post.url %}
+{% assign primary_is_external = false %}
+{% if primary_link contains "://" %}
+  {% assign primary_is_external = true %}
+{% endif %}
+
+
 {% if post.header.teaser %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% else %}
@@ -30,7 +37,11 @@
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+        {% if primary_is_external %}
+            <a href="{{ primary_link }}" target="_blank" rel="noopener">{{ title }}</a>
+        {% else %}
+            <a href="{{ base_path }}{{ primary_link }}" rel="permalink">{{ title }}</a>
+        {% endif %}
       {% endif %}
     </h2>
 
