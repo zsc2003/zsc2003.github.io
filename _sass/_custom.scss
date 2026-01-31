@@ -1,0 +1,18 @@
+/* 全站内容区更宽：桌面端 ~80% 视口宽度；超大屏也不至于无限变宽 */
+@media (min-width: 64em) { /* 约等于 >= 1024px */
+.page__inner-wrap {
+    max-width: min(80vw, 1400px); /* 80%屏宽，上限1400px（你可改成1200/1600） */
+}
+
+/* 关键：很多“右侧空很多却提前换行”其实是这里 max-width 限死了 */
+.page__content {
+    max-width: none;
+}
+}
+
+/* 手机/小屏：保持满宽，避免 80vw 导致内容被压窄 */
+@media (max-width: 64em) {
+.page__inner-wrap {
+    max-width: 100%;
+}
+}
