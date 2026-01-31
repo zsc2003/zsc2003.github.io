@@ -19,11 +19,11 @@ author_profile: true
         <h2>{{ category[1].title }}</h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
-      {% include archive-single-publication.html post=post %}
+      {% include archive-single.html %}
     {% endfor %}
   {% endfor %}
 {% else %}
   {% for post in site.publications reversed %}
-    {% include archive-single-publication.html post=post %}
+    {% include archive-single.html %}
   {% endfor %}
 {% endif %}
