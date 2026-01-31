@@ -1,7 +1,7 @@
 ---
 title: "ArtLLM: Generating Articulated Assets via 3D LLM"
 collection: publications
-category: conference
+category: conferences
 permalink: /publication/2024-artllm
 date: 2024-01-01
 venue: "CVPR 2024"
