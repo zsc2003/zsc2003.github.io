@@ -1,0 +1,40 @@
+{% assign p = include.post %}
+
+<article class="pub-item">
+  {% assign teaser = p.teaser | default: p.header.teaser %}
+  {% if teaser %}
+    <div class="pub-thumb">
+      <a href="{{ p.url | relative_url }}">
+        <img src="{{ teaser | relative_url }}" alt="{{ p.title | escape }}">
+      </a>
+    </div>
+  {% endif %}
+
+  <div class="pub-body">
+    <h3 class="pub-title">
+      <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+    </h3>
+
+    {% if p.authors %}
+      <div class="pub-authors">{{ p.authors }}</div>
+    {% endif %}
+
+    <div class="pub-meta">
+      {% if p.venue %}<em>{{ p.venue }}</em>{% endif %}
+      {% if p.date %}, {{ p.date | date: "%Y" }}{% endif %}
+      {% if p.type %} · {{ p.type }}{% endif %}
+    </div>
+
+    {% if p.excerpt %}
+      <div class="pub-excerpt">{{ p.excerpt }}</div>
+    {% endif %}
+
+    <div class="pub-links">
+      {% if p.project %}<a href="{{ p.project }}">project page</a>{% endif %}
+      {% if p.paperurl %}{% if p.project %} / {% endif %}<a href="{{ p.paperurl }}">paper</a>{% endif %}
+      {% if p.arxiv %}{% if p.project or p.paperurl %} / {% endif %}<a href="{{ p.arxiv }}">arXiv</a>{% endif %}
+      {% if p.code %}{% if p.project or p.paperurl or p.arxiv %} / {% endif %}<a href="{{ p.code }}">code</a>{% endif %}
+      {% if p.slidesurl %}{% if p.project or p.paperurl or p.arxiv or p.code %} / {% endif %}<a href="{{ p.slidesurl }}">slides</a>{% endif %}
+    </div>
+  </div>
+</article>

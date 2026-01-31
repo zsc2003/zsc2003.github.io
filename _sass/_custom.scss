@@ -1,0 +1,40 @@
+.pub-item {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    margin: 2rem 0;
+  }
+
+.pub-thumb img {
+width: 220px;
+height: auto;
+border-radius: 8px;
+object-fit: cover;
+display: block;
+}
+
+.pub-title {
+margin: 0 0 .25rem 0;
+}
+
+.pub-authors {
+margin: .1rem 0 .35rem 0;
+}
+
+.pub-meta {
+margin: 0 0 .6rem 0;
+opacity: .85;
+}
+
+.pub-excerpt {
+margin: .5rem 0 .8rem 0;
+}
+
+.pub-links a {
+text-decoration: none;
+}
+
+@media (max-width: 700px) {
+.pub-item { flex-direction: column; }
+.pub-thumb img { width: 100%; }
+}
