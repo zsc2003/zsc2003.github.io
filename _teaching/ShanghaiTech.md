@@ -10,7 +10,7 @@ end_date: 2025-07-01
 location: "Shanghai, China"
 ---
 
-My TA experiences at ShanghaiTech during undergraduate studyyyyyyyyyyyyyyyyyyyyyyyyyy.
+My TA experiences at ShanghaiTech during undergraduate study.
 
 
 Spring 2023
