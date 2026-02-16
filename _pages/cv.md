@@ -10,4 +10,4 @@ redirect_from:
 {% include base_path %}
 
 ## Resume
-See my latest resume [here](https://zsc2003.github.io/files/Résumé.pdf). tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+See my latest resume [here](https://zsc2003.github.io/files/Résumé.pdf).
