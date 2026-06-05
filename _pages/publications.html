@@ -1,0 +1,57 @@
+---
+layout: single
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% assign tag_string = "" %}
+{% for post in site.publications %}
+  {% if post.tags %}
+    {% for tag in post.tags %}
+      {% assign clean_tag = tag | strip %}
+      {% if clean_tag != "" %}{% assign tag_string = tag_string | append: clean_tag | append: "||" %}{% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+{% assign publication_tags = tag_string | split: "||" | uniq | sort %}
+
+{% if tag_string != "" %}
+<div class="publication-filter" role="group" aria-label="Filter publications by tag">
+  {% for tag in publication_tags %}
+    {% assign clean_tag = tag | strip %}
+    {% if clean_tag == "" %}{% continue %}{% endif %}
+    {% assign tag_count = 0 %}
+    {% for post in site.publications %}
+      {% if post.tags contains clean_tag %}{% assign tag_count = tag_count | plus: 1 %}{% endif %}
+    {% endfor %}
+    <button class="pub-chip pub-chip--filter publication-filter__pill" type="button" data-filter-tag="{{ clean_tag | slugify }}" aria-pressed="false">{{ clean_tag }} ({{ tag_count }})</button>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="publications-list">
+{% if site.publication_category %}
+  {% for category in site.publication_category %}
+    {% assign title_shown = false %}
+    {% for post in site.publications reversed %}
+      {% if post.category != category[0] %}{% continue %}{% endif %}
+      {% unless title_shown %}
+        <h2 class="publication-section-title" data-publication-section="{{ category[0] | slugify }}">{{ category[1].title }}</h2>
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include publication-card.html %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  {% for post in site.publications reversed %}
+    {% include publication-card.html %}
+  {% endfor %}
+{% endif %}
+</div>
+
+<p class="publication-filter__empty" hidden>No publications found for the selected tags.</p>
+
+<script src="{{ base_path }}/assets/js/publications-filter.js"></script>

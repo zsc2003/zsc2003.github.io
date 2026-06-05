@@ -1,0 +1,13 @@
+# Header navigation. Keep this list intentionally small.
+main:
+  - title: "Homepage"
+    url: /
+
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Teaching"
+    url: /teaching/
+
+  - title: "CV"
+    url: /cv/
