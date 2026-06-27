@@ -1,0 +1,59 @@
+{% include base_path %}
+
+{% assign teaser = post.teaser | default: post.header.teaser %}
+{% assign publication_badge = post.badge | default: post.venue %}
+{% assign publication_note = post.note | default: post.award | default: post.presentation %}
+{% assign venue_key = post.venue | split: " " | first | downcase | slugify %}
+{% assign tag_slugs = "" %}
+{% if post.tags %}
+  {% for tag in post.tags %}
+    {% assign clean_tag = tag | strip %}
+    {% if clean_tag != "" %}
+      {% assign clean_tag_slug = clean_tag | slugify %}
+      {% assign tag_slugs = tag_slugs | append: clean_tag_slug %}
+      {% unless forloop.last %}{% assign tag_slugs = tag_slugs | append: "," %}{% endunless %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="list__item">
+  <article class="archive__item archive__item--publication" itemscope itemtype="http://schema.org/CreativeWork" data-tags="{{ tag_slugs }}" data-category="{{ post.category | slugify }}">
+    <div class="publication-card">
+      {% if teaser %}
+        <div class="publication-card__media">
+          <img src="{% if teaser contains '://' %}{{ teaser }}{% else %}{{ teaser | prepend: base_path }}{% endif %}" alt="{{ post.title | escape }} teaser">
+          {% if publication_badge %}<span class="publication-card__badge">{{ publication_badge }}</span>{% endif %}
+        </div>
+      {% endif %}
+
+      <div class="publication-card__body">
+        <h2 class="archive__item-title publication-title" itemprop="headline">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</h2>
+
+        {% if post.authors %}<p class="pub-authors">{{ post.authors }}</p>{% endif %}
+
+        {% if post.venue %}
+          <p class="pub-venue">
+            <span class="pub-venue-main pub-venue-main--{{ venue_key }}"{% if post.venue_color %} style="color: {{ post.venue_color }};"{% endif %}>{{ post.venue }}</span>{% if publication_note %} <span class="pub-venue-note">({{ publication_note }})</span>{% endif %}
+          </p>
+        {% endif %}
+
+        <p class="pub-links">
+          {% if post.paperurl %}<a href="{{ post.paperurl }}">[paper]</a>{% endif %}
+          {% if post.code %}<a href="{{ post.code }}">[code]</a>{% endif %}
+          {% if post.project %}<a href="{{ post.project }}">[project]</a>{% endif %}
+          {% if post.arxiv and post.arxiv != post.paperurl %}<a href="{{ post.arxiv }}">[arxiv]</a>{% endif %}
+          {% if post.slidesurl %}<a href="{{ post.slidesurl }}">[slides]</a>{% endif %}
+        </p>
+
+        {% if post.tags %}
+          <div class="pub-tags" aria-label="Publication tags">
+            {% for tag in post.tags %}
+              {% assign clean_tag = tag | strip %}
+              {% if clean_tag != "" %}<button class="pub-chip pub-chip--inline pub-tag" type="button" data-filter-tag="{{ clean_tag | slugify }}" aria-pressed="false">{{ clean_tag }}</button>{% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+</div>

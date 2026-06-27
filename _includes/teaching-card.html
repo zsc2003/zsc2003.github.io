@@ -1,0 +1,29 @@
+{% include base_path %}
+{% assign teaching_logo = post.logo | default: post.teaser | default: post.header.teaser %}
+
+<div class="list__item">
+  <article class="archive__item archive__item--teaching" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="teaching-card">
+      {% if teaching_logo %}
+        <div class="teaching-card__media">
+          <img src="{% if teaching_logo contains '://' %}{{ teaching_logo }}{% else %}{{ teaching_logo | prepend: base_path }}{% endif %}" alt="{{ post.venue | default: post.title | escape }} logo">
+        </div>
+      {% endif %}
+
+      <div class="teaching-card__body">
+        <h2 class="archive__item-title teaching-card__title" itemprop="headline">
+          <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+        </h2>
+
+        <p class="teaching-card__meta">
+          {{ post.type }}, <i>{{ post.venue }}</i>,
+          {% assign start_year = post.date | default: "1900-01-01" | date: "%Y" %}
+          {% assign end_year = post.end_date | default: "1900-01-01" | date: "%Y" %}
+          {% if post.end_date and start_year != end_year %}{{ start_year }}–{{ end_year }}{% else %}{{ start_year }}{% endif %}
+        </p>
+
+        {% if post.excerpt %}<p class="teaching-card__excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
+      </div>
+    </div>
+  </article>
+</div>
