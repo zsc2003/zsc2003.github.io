@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant at ShanghaiTech"
+title: "Teaching Assistant at ShanghaiTech University"
 collection: teaching
 type: "Undergraduate Courses"
 permalink: /teaching/ShanghaiTech

@@ -1,5 +1,5 @@
 ---
-title: "Teaching Assistant at Tsinghua"
+title: "Teaching Assistant at Tsinghua University"
 collection: teaching
 permalink: /teaching/Tsinghua
 venue: "Tsinghua University"
@@ -7,7 +7,7 @@ date: 2026-09-01
 ongoing: true
 location: "Beijing, China"
 logo: /images/logo/Tsinghua_Logo.png
-excerpt: "Teaching assistant for Probability and Statistics at Tsinghua University."
+excerpt: "Teaching assistant experience at Tsinghua University."
 ---
 
 I have served as a teaching assistant at Tsinghua University since 2026.
