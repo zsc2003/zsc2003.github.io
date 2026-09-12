@@ -1,17 +1,16 @@
 ---
 title: "Teaching Assistant at ShanghaiTech University"
 collection: teaching
-type: "Undergraduate Courses"
 permalink: /teaching/ShanghaiTech
 venue: "ShanghaiTech University"
 date: 2023-09-01
 end_date: 2025-07-01
 location: "Shanghai, China"
 logo: /images/logo/ShanghaiTech_Logo.png
-excerpt: "Teaching assistant experience for undergraduate courses at ShanghaiTech University."
+excerpt: "Teaching assistant experience at ShanghaiTech University."
 ---
 
-I served as a teaching assistant for several undergraduate courses at ShanghaiTech University from 2023 to 2025.
+I served as a teaching assistant at ShanghaiTech University from 2023 to 2025.
 
 <h2 class="teaching-detail__section-title">Teaching Experience</h2>
 
