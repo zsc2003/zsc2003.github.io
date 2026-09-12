@@ -7,14 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-I'm currently a master's student at [Tsinghua University](https://www.tsinghua.edu.cn/), majoring in Mathematics since 2025.
+I am currently a master's student in Mathematics at [Tsinghua University](https://www.tsinghua.edu.cn/), advised by [Prof. Chenglong Bao](https://matbc.github.io/).
 
-I was an undergraduate student at [ShanghaiTech University](https://www.shanghaitech.edu.cn/), majoring in Computer Science from 2021 to 2025.
+I received my Bachelor of Engineering in Computer Science from [ShanghaiTech University](https://www.shanghaitech.edu.cn/) in 2025. During my undergraduate studies, I conducted research at the VRVC Lab under the supervision of [Prof. Jingyi Yu](https://faculty.sist.shanghaitech.edu.cn/yujingyi/), focusing on cryo-EM reconstruction, and also received guidance from [Prof. Ziyu Shao](https://faculty.sist.shanghaitech.edu.cn/faculty/shaozy/).
 
 
 
 Email:
 ------
 <a href="mailto:zhousc25@mails.tsinghua.edu.cn">zhousc25@mails.tsinghua.edu.cn</a><br>
-<a href="mailto:zhoushch@alumni.shanghaitech.edu.cn">zhoushch@alumni.shanghaitech.edu.cn</a><br>
-<a href="mailto:zhoushch@shanghaitech.edu.cn">zhoushch@shanghaitech.edu.cn</a>
+<a href="mailto:zhoushch@alumni.shanghaitech.edu.cn">zhoushch@alumni.shanghaitech.edu.cn</a>
