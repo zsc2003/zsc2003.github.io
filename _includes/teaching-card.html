@@ -16,10 +16,10 @@
         </h2>
 
         <p class="teaching-card__meta">
-          {{ post.type }}, <i>{{ post.venue }}</i>,
+          {% if post.type %}{{ post.type }}, {% endif %}<i>{{ post.venue }}</i>,
           {% assign start_year = post.date | default: "1900-01-01" | date: "%Y" %}
           {% assign end_year = post.end_date | default: "1900-01-01" | date: "%Y" %}
-          {% if post.end_date and start_year != end_year %}{{ start_year }}–{{ end_year }}{% else %}{{ start_year }}{% endif %}
+          {% if post.ongoing %}{{ start_year }}–Present{% elsif post.end_date and start_year != end_year %}{{ start_year }}–{{ end_year }}{% else %}{{ start_year }}{% endif %}
         </p>
 
         {% if post.excerpt %}<p class="teaching-card__excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}

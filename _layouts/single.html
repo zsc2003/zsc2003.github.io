@@ -17,10 +17,10 @@ layout: default
 
         {% if page.collection == 'teaching' %}
           <p class="page__subtitle">
-            {{ page.type }}, <i>{{ page.venue }}</i>,
+            {% if page.type %}{{ page.type }}, {% endif %}<i>{{ page.venue }}</i>,
             {% assign start_year = page.date | default: "1900-01-01" | date: "%Y" %}
             {% assign end_year = page.end_date | default: "1900-01-01" | date: "%Y" %}
-            {% if page.end_date and start_year != end_year %}{{ start_year }}–{{ end_year }}{% else %}{{ start_year }}{% endif %}
+            {% if page.ongoing %}{{ start_year }}–Present{% elsif page.end_date and start_year != end_year %}{{ start_year }}–{{ end_year }}{% else %}{{ start_year }}{% endif %}
           </p>
         {% elsif page.collection == 'publications' and page.venue %}
           <p class="page__subtitle">
