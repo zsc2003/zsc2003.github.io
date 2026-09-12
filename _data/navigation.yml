@@ -1,8 +1,5 @@
 # Header navigation. Keep this list intentionally small.
 main:
-  - title: "Homepage"
-    url: /
-
   - title: "Publications"
     url: /publications/
 
